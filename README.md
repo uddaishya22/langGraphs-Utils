@@ -11,9 +11,9 @@ Key Principles for Checkpointing Nested Graphs:
 • Do NOT initialize separate checkpointers for subgraphs 
 • The parent graph's checkpointer will automatically be propagated to all nested subgraphs
 
-####### Proof Points from Documentation: 
+###### Proof Points from Documentation: 
 • LangGraph explicitly states: "You shouldn't provide a checkpointer when compiling a subgraph"
 • The checkpointer is automatically propagated to child graphs when you compile the parent graph 
 • This approach ensures consistent state tracking across nested graph structures
 
-####### Recommendation: Always use a single checkpointer initialized at the top-level graph compilation.
+###### Recommendation: Always use a single checkpointer initialized at the top-level graph compilation.
